@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -35,6 +36,7 @@ import com.example.appbanhang.retrofit.ApiBanHang;
 import com.example.appbanhang.retrofit.RetrofitClient;
 import com.example.appbanhang.utils.Utils;
 import com.google.android.material.navigation.NavigationView;
+import com.nex3z.notificationbadge.NotificationBadge;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,18 +47,20 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
-Toolbar toolbar;
-ViewFlipper viewFlipper;
-RecyclerView recyclerViewManHinhChinh;
-NavigationView navigationView;
-ListView listViewManHinhChinh;
-DrawerLayout drawerLayout;
-LoaiSpAdapter loaiSpAdapter;
-List<LoaiSp> mangloaisp;
-CompositeDisposable compositeDisposable = new CompositeDisposable();
-ApiBanHang apiBanHang;
-List<SanPhamMoi> mangSpMoi;
-SanPhamMoiAdapter spAdapter;
+    Toolbar toolbar;
+    ViewFlipper viewFlipper;
+    RecyclerView recyclerViewManHinhChinh;
+    NavigationView navigationView;
+    ListView listViewManHinhChinh;
+    DrawerLayout drawerLayout;
+    LoaiSpAdapter loaiSpAdapter;
+    List<LoaiSp> mangloaisp;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    ApiBanHang apiBanHang;
+    List<SanPhamMoi> mangSpMoi;
+    SanPhamMoiAdapter spAdapter;
+    NotificationBadge badge;
+    FrameLayout frameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,12 +90,12 @@ SanPhamMoiAdapter spAdapter;
                         startActivity(trangchu);
                         break;
                     case 1:
-                        Intent laptop = new Intent(getApplicationContext(),DienThoaiActivity.class);
+                        Intent laptop = new Intent(getApplicationContext(),AoThunActivity.class);
                         laptop.putExtra("loai",2);
                         startActivity(laptop);
                         break;
                     case 2:
-                        Intent dienthoai = new Intent(getApplicationContext(),DienThoaiActivity.class);
+                        Intent dienthoai = new Intent(getApplicationContext(),AoThunActivity.class);
                         dienthoai.putExtra("loai",1);
                         startActivity(dienthoai);
                         break;
@@ -106,12 +110,12 @@ SanPhamMoiAdapter spAdapter;
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         sanPhamMoiModel -> {
-                           if (sanPhamMoiModel.isSuccess()){
-                               mangSpMoi = sanPhamMoiModel.getResult();
-                               spAdapter = new SanPhamMoiAdapter(getApplicationContext(),mangSpMoi);
-                               recyclerViewManHinhChinh.setAdapter(spAdapter);
+                            if (sanPhamMoiModel.isSuccess()){
+                                mangSpMoi = sanPhamMoiModel.getResult();
+                                spAdapter = new SanPhamMoiAdapter(getApplicationContext(),mangSpMoi);
+                                recyclerViewManHinhChinh.setAdapter(spAdapter);
 
-                           }
+                            }
                         },
                         throwable -> {
                             Toast.makeText(getApplicationContext(),"khong ket noi dc voi sever"+ throwable.getMessage(),Toast.LENGTH_LONG).show();
@@ -120,25 +124,25 @@ SanPhamMoiAdapter spAdapter;
     }
 
     private void getLoaiSanPham(){
-         compositeDisposable.add(apiBanHang.getLoaiSp()
-                 .subscribeOn(Schedulers.io())
-                 .observeOn(AndroidSchedulers.mainThread())
-                 .subscribe(
-                         loaiSpModel -> {
-                             if (loaiSpModel.isSuccess()){
-                              mangloaisp = loaiSpModel.getResult();
-                                 loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
-                                 listViewManHinhChinh.setAdapter(loaiSpAdapter);
-                             }
-                         }
-                 ));
+        compositeDisposable.add(apiBanHang.getLoaiSp()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(
+                        loaiSpModel -> {
+                            if (loaiSpModel.isSuccess()){
+                                mangloaisp = loaiSpModel.getResult();
+                                loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
+                                listViewManHinhChinh.setAdapter(loaiSpAdapter);
+                            }
+                        }
+                ));
     }
 
     private void ActionViewFlipper(){
         List<String> mangquancao= new ArrayList<>();
-        mangquancao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-Le-hoi-phu-kien-800-300.png");
-        mangquancao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-HC-Tra-Gop-800-300.png");
-        mangquancao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg");
+        mangquancao.add("https://th.bing.com/th/id/R.3155a207846eef16cadf5c45e32aad85?rik=YK0kDHIH4OgUGA&pid=ImgRaw&r=0");
+        mangquancao.add("https://cuongstore.vn/wp-content/uploads/2022/09/tt4-1024x406-1.png");
+        mangquancao.add("https://th.bing.com/th/id/OIP.-02X99vwXFPyUNL9Rmz2ogHaEE?pid=ImgDet&rs=1");
         for (int i=0; i<mangquancao.size(); i++){
             ImageView imageView = new ImageView(getApplicationContext());
             Glide.with(getApplicationContext()).load(mangquancao.get(i)).into(imageView);
@@ -161,7 +165,7 @@ SanPhamMoiAdapter spAdapter;
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             drawerLayout.openDrawer(GravityCompat.START);
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
     }
@@ -176,12 +180,39 @@ SanPhamMoiAdapter spAdapter;
         listViewManHinhChinh = findViewById(R.id.listviewmanhinhchinh);
         navigationView = findViewById(R.id.navigationview);
         drawerLayout = findViewById(R.id.drawerlayout);
+        badge = findViewById(R.id.menu_sl);
+        frameLayout = findViewById(R.id.framgiohang);
         // khoi tao list
         mangloaisp = new ArrayList<>();
         mangSpMoi = new ArrayList<>();
-
-
+        if (Utils.manggiohang == null){
+            Utils.manggiohang = new ArrayList<>();
+        }else {
+            int totalItem = 0;
+            for (int i = 0; i<Utils.manggiohang.size(); i++){
+                totalItem = totalItem+Utils.manggiohang.get(i).getSoluong();
+            }
+            badge.setText(String.valueOf(totalItem));
+        }
+        frameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent giohang = new Intent(getApplicationContext(),GioHangActivity.class);
+                startActivity(giohang);
+            }
+        });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        int totalItem = 0;
+        for (int i = 0; i<Utils.manggiohang.size(); i++){
+            totalItem = totalItem+Utils.manggiohang.get(i).getSoluong();
+        }
+        badge.setText(String.valueOf(totalItem));
+    }
+
     private boolean isConnected (Context context){
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo wifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);

@@ -1,7 +1,6 @@
 package com.example.appbanhang.activity;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,7 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.appbanhang.R;
-import com.example.appbanhang.adapter.DienThoaiAdapter;
+import com.example.appbanhang.adapter.AothunAdapter;
 import com.example.appbanhang.model.SanPhamMoi;
 import com.example.appbanhang.retrofit.ApiBanHang;
 import com.example.appbanhang.retrofit.RetrofitClient;
@@ -25,17 +24,16 @@ import java.util.List;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-import retrofit2.Retrofit;
 
 
-public class DienThoaiActivity extends AppCompatActivity {
+public class AoThunActivity extends AppCompatActivity {
     Toolbar toolbar;
     RecyclerView recyclerView;
     ApiBanHang apiBanHang;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     int page = 1;
     int loai;
-    DienThoaiAdapter adapterDt;
+    AothunAdapter adapterDt;
     List<SanPhamMoi> sanPhamMoiList;
     LinearLayoutManager linearLayoutManager;
     Handler handler = new Handler();
@@ -44,7 +42,7 @@ public class DienThoaiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dien_thoai);
+        setContentView(R.layout.activity_aothun);
         apiBanHang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
         loai = getIntent().getIntExtra("loai",1);
 
@@ -104,7 +102,7 @@ public class DienThoaiActivity extends AppCompatActivity {
                           if (sanPhamMoiModel.isSuccess()){
                               if (adapterDt == null){
                                   sanPhamMoiList = sanPhamMoiModel.getResult();
-                                  adapterDt = new DienThoaiAdapter(getApplicationContext(), sanPhamMoiList);
+                                  adapterDt = new AothunAdapter(getApplicationContext(), sanPhamMoiList);
                                   recyclerView.setAdapter(adapterDt);
                               }else {
                                   int vitri = sanPhamMoiList.size()-1;

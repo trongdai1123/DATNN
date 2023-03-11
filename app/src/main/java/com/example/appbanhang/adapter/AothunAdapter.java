@@ -18,18 +18,16 @@ import com.example.appbanhang.R;
 import com.example.appbanhang.activity.ChiTietActivity;
 import com.example.appbanhang.model.SanPhamMoi;
 
-import org.w3c.dom.Text;
-
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class DienThoaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class AothunAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     Context context;
     List<SanPhamMoi>array;
     private static final int VIEW_TYPE_DATA = 0;
     private static final int VIEW_TYPE_LOADING = 1;
 
-    public DienThoaiAdapter(Context context, List<SanPhamMoi> array) {
+    public AothunAdapter(Context context, List<SanPhamMoi> array) {
         this.context = context;
         this.array = array;
     }
@@ -47,7 +45,7 @@ public class DienThoaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType ==VIEW_TYPE_DATA){
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dienthoai,parent,false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_aothun,parent,false);
             return new MyViewHolder(view);
         }else {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_loading,parent,false);
@@ -62,7 +60,7 @@ public class DienThoaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
              SanPhamMoi sanPham = array.get(position);
              myViewHolder.tensp.setText(sanPham.getTensp().trim());
              DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-             myViewHolder.gia.setText("Giá: "+decimalFormat.format(Double.parseDouble(sanPham.getGia()))+"Đ" );
+             myViewHolder.gia.setText("Giá: "+decimalFormat.format(Double.parseDouble(sanPham.getGia()))+"đ" );
              myViewHolder.mota.setText(sanPham.getMota());
              myViewHolder.idsp.setText(sanPham.getId() + "");
              Glide.with(context).load(sanPham.getHinhanh()).into(myViewHolder.hinhanh);
