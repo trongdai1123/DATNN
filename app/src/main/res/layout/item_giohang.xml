@@ -39,6 +39,7 @@
                 <TextView
                     android:id="@+id/item_giohang_gia"
                     android:text="15000"
+                    android:fontFamily="serif"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="7"
                     android:textColor="@android:color/holo_red_light"
@@ -53,6 +54,7 @@
                 <TextView
                     android:id="@+id/item_giohang_soluong"
                     android:gravity="center"
+                    android:fontFamily="serif"
                     android:layout_weight="1"
                     android:text="1"
                     android:textSize="15sp"
@@ -73,6 +75,7 @@
                 <TextView
                     android:id="@+id/item_giohang_giasp2"
                     android:text="25000 đ"
+                    android:fontFamily="serif"
                     android:gravity="center|center_vertical"
                     android:layout_weight="7"
                     android:textStyle="bold"
