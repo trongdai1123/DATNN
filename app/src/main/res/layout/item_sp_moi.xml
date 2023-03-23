@@ -6,7 +6,7 @@
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
     app:cardCornerRadius="10dp"
-    android:layout_width="200dp"
+    android:layout_width="150dp"
     android:layout_height="wrap_content"
     android:backgroundTint="#F6E2DC">
 
@@ -23,7 +23,7 @@
             <ImageView
                 android:id="@+id/itemsp_image"
                 android:layout_width="match_parent"
-                android:layout_height="261dp"
+                android:layout_height="174dp"
                 android:src="@drawable/ic_media_24" />
 
             <TextView

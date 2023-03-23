@@ -12,6 +12,7 @@
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_phone.xml" value="0.1565" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_remove.xml" value="0.1565" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_user.xml" value="0.1565" />
+        <entry key="..\:/DATNN/app/src/main/res/drawable/ocation.xml" value="0.137" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/spinner.xml" value="0.1565" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_aothun.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_chi_tiet.xml" value="0.25" />
@@ -22,12 +23,14 @@
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_quan.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_reset_pass.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/activity_thanh_toan.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_aothun.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_dienthoai.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_giohang.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_loading.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_sanpham.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_sp_moi.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/location.xml" value="0.25" />
         <entry key="..\:/androi/AppBanHang/app/src/main/res/drawable/spinner.xml" value="0.1565" />
         <entry key="..\:/androi/AppBanHang/app/src/main/res/layout/activity_chi_tiet.xml" value="0.25" />
         <entry key="..\:/androi/AppBanHang/app/src/main/res/layout/activity_dien_thoai.xml" value="0.264" />
