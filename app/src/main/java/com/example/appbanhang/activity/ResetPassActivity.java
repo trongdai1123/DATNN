@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appbanhang.R;
@@ -26,6 +27,8 @@ public class ResetPassActivity extends AppCompatActivity {
     ApiBanHang apiBanHang;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     ProgressBar progressBar;
+    TextView txtdangnhap;
+
 
 
     @Override
@@ -68,6 +71,13 @@ public class ResetPassActivity extends AppCompatActivity {
                 }
             }
         });
+        txtdangnhap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),DangNhapActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initView() {
@@ -75,6 +85,7 @@ public class ResetPassActivity extends AppCompatActivity {
         btnreset = findViewById(R.id.btnresetpass);
         apiBanHang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
         progressBar = findViewById(R.id.progressbar);
+        txtdangnhap = findViewById(R.id.txtdangnhap);
     }
 
     @Override

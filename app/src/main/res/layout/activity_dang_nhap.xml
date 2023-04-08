@@ -5,22 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.DangNhapActivity">
-
-
-    <TextView
-        android:id="@+id/txtdangnhap"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Đăng Nhập"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:textColor="#F12D4A"
-        android:gravity="center"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
+    <LinearLayout
+        android:background="#80F1CEAE"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/center"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:src="@drawable/laundry"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+        <TextView
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="CLOTHE3R SHOP"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <TextView
+            android:textColor="#0B0A0A"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Welcome To Cloth3r"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <TextView
+            android:textSize="17dp"
+            android:gravity="center"
+            android:text="Đăng nhập để tiếp tục sử dụng"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
     <com.google.android.material.textfield.TextInputLayout
-        app:layout_constraintTop_toBottomOf="@+id/txtdangnhap"
+        app:layout_constraintTop_toBottomOf="@+id/center"
         android:layout_marginTop="5dp"
         android:id="@+id/line1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -48,6 +81,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginBottom="20dp"
             android:id="@+id/pass"
             android:hint="Password"
             android:layout_marginLeft="10dp"
@@ -95,20 +129,45 @@
             android:textColor="@android:color/holo_red_light"
             android:textSize="15sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:textStyle="bold"
+            android:text="Quên mật khẩu?"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:id="@+id/txtresetpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <TextView
-        app:layout_constraintTop_toBottomOf="@+id/line6"
-        android:layout_marginTop="15dp"
-        android:text="Quên mật khẩu"
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="15sp"
+
+    <LinearLayout
         android:gravity="center"
-        android:id="@+id/txtresetpass"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_facebook" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-
-
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_google" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

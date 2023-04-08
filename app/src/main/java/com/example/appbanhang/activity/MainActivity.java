@@ -90,15 +90,20 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(trangchu);
                         break;
                     case 1:
-                        Intent laptop = new Intent(getApplicationContext(),AoThunActivity.class);
-                        laptop.putExtra("loai",2);
-                        startActivity(laptop);
+                        Intent quan = new Intent(getApplicationContext(),QuanActivity.class);
+                        quan.putExtra("loai",2);
+                        startActivity(quan);
                         break;
                     case 2:
-                        Intent dienthoai = new Intent(getApplicationContext(),AoThunActivity.class);
-                        dienthoai.putExtra("loai",1);
-                        startActivity(dienthoai);
+                        Intent aothun = new Intent(getApplicationContext(),AoThunActivity.class);
+                        aothun.putExtra("loai",1);
+                        startActivity(aothun);
                         break;
+                    case 5:
+                        Intent donhang = new Intent(getApplicationContext(),XemDonHangActivity.class);
+                        startActivity(donhang);
+                        break;
+
                 }
             }
         });
@@ -140,9 +145,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void ActionViewFlipper(){
         List<String> mangquancao= new ArrayList<>();
-        mangquancao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-Le-hoi-phu-kien-800-300.png");
-        mangquancao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-HC-Tra-Gop-800-300.png");
-        mangquancao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg");
+        mangquancao.add("https://toplist.vn/images/800px/shop-ban-quan-ao-the-thao-dep-va-chat-luong-nhat-can-tho-173833.jpg");
+        mangquancao.add("https://caohoaitrung.com/wp-content/uploads/2019/03/ban-quan-ao-tren-instagram-1.jpg");
+        mangquancao.add("https://img3.thuthuatphanmem.vn/uploads/2019/10/14/banner-thoi-trang-dang-hien-dai-nhat_113856210.jpg");
         for (int i=0; i<mangquancao.size(); i++){
             ImageView imageView = new ImageView(getApplicationContext());
             Glide.with(getApplicationContext()).load(mangquancao.get(i)).into(imageView);

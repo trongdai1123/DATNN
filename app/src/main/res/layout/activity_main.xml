@@ -49,7 +49,7 @@
                 android:background="#FFFFFF">
                 <TextView
                     android:textSize="20sp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="15dp"
                     android:textColor="#F40505"
                     android:textStyle="bold"
                     android:fontFamily="serif"
@@ -59,7 +59,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                 </androidx.recyclerview.widget.RecyclerView>

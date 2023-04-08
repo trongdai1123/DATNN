@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toobar"
-        app:title="LapTop"
+        app:title="Quần"
         android:background="#F19274"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appbanhang.R;
@@ -21,6 +22,7 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class DangKyActivity extends AppCompatActivity {
+    TextView txtdangnhap;
     EditText email, pass, repass, mobile, username;
     AppCompatButton button;
     ApiBanHang apiBanHang;
@@ -38,6 +40,13 @@ public class DangKyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dangky();
+            }
+        });
+        txtdangnhap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),DangNhapActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -92,6 +101,7 @@ public class DangKyActivity extends AppCompatActivity {
         mobile = findViewById(R.id.mobile);
         username = findViewById(R.id.username);
         button = findViewById(R.id.btndangky);
+        txtdangnhap = findViewById(R.id.txtdangnhap);
     }
 
     @Override

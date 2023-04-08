@@ -20,10 +20,13 @@
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_dang_nhap.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_dien_thoai.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_gio_hang.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/activity_lien_he.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_quan.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_reset_pass.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_thanh_toan.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/activity_thongtin.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/activity_xem_don_hang.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_aothun.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_dienthoai.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_giohang.xml" value="0.25" />
