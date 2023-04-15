@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DATNN/app/src/main/res/drawable-mdpi/ic_search.xml" value="0.137" />
         <entry key="..\:/DATNN/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1565" />
+        <entry key="..\:/DATNN/app/src/main/res/drawable/btn_back.xml" value="0.1635" />
+        <entry key="..\:/DATNN/app/src/main/res/drawable/grey_background.xml" value="0.1635" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1565" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_cart.xml" value="0.1565" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_handle.xml" value="0.1565" />
@@ -13,7 +16,10 @@
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_remove.xml" value="0.1565" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/ic_user.xml" value="0.1565" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/ocation.xml" value="0.137" />
+        <entry key="..\:/DATNN/app/src/main/res/drawable/oval_background.xml" value="0.1635" />
         <entry key="..\:/DATNN/app/src/main/res/drawable/spinner.xml" value="0.1565" />
+        <entry key="..\:/DATNN/app/src/main/res/drawable/top_background.xml" value="0.137" />
+        <entry key="..\:/DATNN/app/src/main/res/drawable/white_background.xml" value="0.1635" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_aothun.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_chi_tiet.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_dang_ky.xml" value="0.25" />
@@ -22,13 +28,17 @@
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_gio_hang.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_lien_he.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_quan.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_reset_pass.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_thanh_toan.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_thongtin.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/activity_xem_don_hang.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_aothun.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/item_chitiet.xml" value="0.2" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_dienthoai.xml" value="0.25" />
+        <entry key="..\:/DATNN/app/src/main/res/layout/item_donhang.xml" value="0.20427350427350427" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_giohang.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_loading.xml" value="0.25" />
         <entry key="..\:/DATNN/app/src/main/res/layout/item_sanpham.xml" value="0.25" />
