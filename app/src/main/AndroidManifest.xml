@@ -18,34 +18,39 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".activity.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.SearchActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.LienHeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.ThongtinActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.XemDonHangActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.ThanhToanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.ResetPassActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.DangNhapActivity"
-            android:exported="true">
+            android:name=".activity.SplashActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LienHeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ThongtinActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.XemDonHangActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ThanhToanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ResetPassActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.DangNhapActivity"
+            android:exported="true">
+
         </activity>
         <activity
             android:name=".activity.DangKyActivity"

@@ -32,6 +32,7 @@ import com.example.appbanhang.adapter.SanPhamMoiAdapter;
 import com.example.appbanhang.model.LoaiSp;
 import com.example.appbanhang.model.SanPhamMoi;
 import com.example.appbanhang.model.SanPhamMoiModel;
+import com.example.appbanhang.model.User;
 import com.example.appbanhang.retrofit.ApiBanHang;
 import com.example.appbanhang.retrofit.RetrofitClient;
 import com.example.appbanhang.utils.Utils;
@@ -41,6 +42,7 @@ import com.nex3z.notificationbadge.NotificationBadge;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.paperdb.Paper;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Scheduler;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
@@ -67,6 +69,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         apiBanHang  = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
+        Paper.init(this);
+        if (Paper.book().read("user")!= null){
+            User user = Paper.book().read("user");
+            Utils.user_current = user;
+        }
 
         Anhxa();
         ActionBar();
@@ -108,6 +115,12 @@ public class MainActivity extends AppCompatActivity {
                         Intent donhang = new Intent(getApplicationContext(),XemDonHangActivity.class);
                         startActivity(donhang);
                         break;
+                    case 6:
+                        Paper.book().delete("user");
+                        Intent dangnhap = new Intent(getApplicationContext(),DangNhapActivity.class);
+                        startActivity(dangnhap);
+                        break;
+
 
                 }
             }
