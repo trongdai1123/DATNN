@@ -17,6 +17,7 @@ import com.example.appbanhang.Interface.ItemClickListener;
 import com.example.appbanhang.R;
 import com.example.appbanhang.activity.ChiTietActivity;
 import com.example.appbanhang.model.SanPhamMoi;
+import com.example.appbanhang.utils.Utils;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -63,7 +64,12 @@ public class AothunAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
              myViewHolder.gia.setText("Giá: "+decimalFormat.format(Double.parseDouble(sanPham.getGia()))+"đ" );
              myViewHolder.mota.setText(sanPham.getMota());
              myViewHolder.idsp.setText(sanPham.getId() + "");
-             Glide.with(context).load(sanPham.getHinhanh()).into(myViewHolder.hinhanh);
+             if (sanPham.getHinhanh().contains("http")){
+                 Glide.with(context).load(sanPham.getHinhanh()).into(((MyViewHolder) holder).hinhanh);
+             }else {
+                 String hinh = Utils.BASE_URL+"images/" + sanPham.getHinhanh();
+                 Glide.with(context).load(hinh).into(((MyViewHolder) holder).hinhanh);
+             }
 
              myViewHolder.setItemClickListener(new ItemClickListener() {
                  @Override

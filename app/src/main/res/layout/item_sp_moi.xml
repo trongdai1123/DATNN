@@ -8,7 +8,7 @@
     app:cardCornerRadius="10dp"
     android:layout_width="150dp"
     android:layout_height="wrap_content"
-    android:backgroundTint="#F6E2DC">
+    android:backgroundTint="#FFEBE6">
 
     <FrameLayout
         android:layout_width="match_parent"

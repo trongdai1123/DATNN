@@ -44,6 +44,7 @@
         <TextView
             android:textSize="17dp"
             android:gravity="center"
+            android:textStyle="italic"
             android:text="Vui lòng nhập mail đã đăng ký"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>

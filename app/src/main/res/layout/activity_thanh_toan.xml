@@ -33,12 +33,12 @@
                 android:padding="5dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="80dp">
                 <ImageView
                     android:src="@drawable/money"
                     android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="80dp"/>
                 <TextView
                     android:id="@+id/txttongtien"
                     android:layout_gravity="center"
@@ -58,13 +58,13 @@
                 android:padding="5dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="80dp">
                 <ImageView
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/smartphone"
                     android:layout_width="27dp"
-                    android:layout_height="27dp"/>
+                    android:layout_height="80dp"/>
                 <TextView
                     android:id="@+id/txtsodienthoai"
                     android:layout_gravity="center"
@@ -85,13 +85,13 @@
                 android:padding="5dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="80dp">
                 <ImageView
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/ic_email"
                     android:layout_width="27dp"
-                    android:layout_height="27dp"/>
+                    android:layout_height="80dp"/>
                 <TextView
                     android:id="@+id/txtemail"
                     android:layout_gravity="center"
@@ -122,7 +122,7 @@
             android:drawableLeft="@drawable/ocation"
             android:hint="Nhập địa chỉ giao hàng"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="80dp">
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
     <androidx.appcompat.widget.AppCompatButton

@@ -17,6 +17,7 @@ import com.example.appbanhang.Interface.ItemClickListener;
 import com.example.appbanhang.R;
 import com.example.appbanhang.activity.ChiTietActivity;
 import com.example.appbanhang.model.SanPhamMoi;
+import com.example.appbanhang.utils.Utils;
 
 import org.w3c.dom.Text;
 
@@ -45,7 +46,12 @@ List<SanPhamMoi> array;
         holder.txtten.setText(sanPhamMoi.getTensp());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         holder.txtgia.setText("Giá: "+ decimalFormat.format(Double.parseDouble(sanPhamMoi.getGia()))+"Đ");
-        Glide.with(context).load(sanPhamMoi.getHinhanh()).into(holder.imghinhanh);
+        if (sanPhamMoi.getHinhanh().contains("http")){
+            Glide.with(context).load(sanPhamMoi.getHinhanh()).into(holder.imghinhanh);
+        }else {
+            String hinh = Utils.BASE_URL+"images/" + sanPhamMoi.getHinhanh();
+            Glide.with(context).load(hinh).into(holder.imghinhanh);
+        }
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override

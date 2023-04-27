@@ -163,9 +163,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void ActionViewFlipper(){
         List<String> mangquancao= new ArrayList<>();
-        mangquancao.add("https://toplist.vn/images/800px/shop-ban-quan-ao-the-thao-dep-va-chat-luong-nhat-can-tho-173833.jpg");
-        mangquancao.add("https://caohoaitrung.com/wp-content/uploads/2019/03/ban-quan-ao-tren-instagram-1.jpg");
-        mangquancao.add("https://img3.thuthuatphanmem.vn/uploads/2019/10/14/banner-thoi-trang-dang-hien-dai-nhat_113856210.jpg");
+        mangquancao.add("https://th.bing.com/th/id/R.9a034a2f9fb85da56c44898815cf7da1?rik=VkNJhdgILGsgpQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-__NdPbMySjQ%2fUDAZMknAMGI%2fAAAAAAAABEw%2fC3G3YdAeq0w%2fs1600%2fmoda-masculina-3.jpg&ehk=RUZ3uM89NReSeCQauuq%2bTT%2bGSa5XgvO4GHGFt1Vb5QQ%3d&risl=&pid=ImgRaw&r=0");
+        mangquancao.add("https://www.thedropdate.com/wp-content/uploads/2019/01/UNIQLO-U-by-Christophe-Lemaire.jpg");
+        mangquancao.add("https://storage.googleapis.com/cdn.nhanh.vn/store/11055/bn/sb_1500887344_476.jpg");
         for (int i=0; i<mangquancao.size(); i++){
             ImageView imageView = new ImageView(getApplicationContext());
             Glide.with(getApplicationContext()).load(mangquancao.get(i)).into(imageView);
